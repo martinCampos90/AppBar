@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">BuleBar</string>
-    <string name="slogan">Donde debes de estar</string>
+    <string name="slogan">Donde debes estar</string>
+    <string name="slogan1">Billar &amp; Snacks</string>
+
     <string name="title_activity_home">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
