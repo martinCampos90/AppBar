@@ -52,7 +52,7 @@ public class SignUp extends AppCompatActivity {
                             Toast.makeText(SignUp.this,"Este número ya está registrado",Toast.LENGTH_SHORT).show();
                         }else{
                             mDialog.dismiss();
-                            User user = new User (edtName.getText().toString(),edtPassword.getText().toString());
+                            User user = new User (edtName.getText().toString(),edtPassword.getText().toString(),edtPhone.getText().toString());
                             table_user.child(edtPhone.getText().toString()).setValue(user);
                             Toast.makeText(SignUp.this,"¡Registro éxitoso!", Toast.LENGTH_SHORT).show();
                             finish();

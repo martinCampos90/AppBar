@@ -1,5 +1,6 @@
 package bulebar.reservacion.appbar;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -66,7 +67,11 @@ public class FoodList extends AppCompatActivity {
                 viewHolder.setItemClickListener(new ItemClickListener(){
                     @Override
                     public void onClick(View vie, int position, boolean isLongClick){
-                        Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+                        //Start new Activity
+                        Intent foodDetail = new Intent(FoodList.this,FoodDetail.class);
+                        foodDetail.putExtra("FoodId",adapter.getRef(position).getKey());//Send Food Id to new Activity
+                        startActivity(foodDetail);
                     }
                 });
             }
