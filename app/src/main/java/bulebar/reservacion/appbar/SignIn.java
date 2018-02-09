@@ -40,7 +40,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 final ProgressDialog mDialog = new ProgressDialog(SignIn.this);
-                mDialog.setMessage("Please waiting...");
+                mDialog.setMessage("Por favor espere...");
                 mDialog.show();
 
                 table_user.addValueEventListener(new ValueEventListener() {
@@ -58,11 +58,11 @@ public class SignIn extends AppCompatActivity {
                                 startActivity(homeIntent);
                                 finish();
                             }else{
-                                Toast.makeText(SignIn.this, "Sign in failed !!!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignIn.this, "¡Fallo al ingresar!", Toast.LENGTH_SHORT).show();
                             }
                         }else{
                             mDialog.dismiss();
-                            Toast.makeText(SignIn.this, "User not exist in Database", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignIn.this, "El usuario no existe en la base de datos", Toast.LENGTH_SHORT).show();
                         }
 
                     }

@@ -28,6 +28,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //Add Library
+
+    //Libraries to working with SQLite
+    compile 'com.readystatesoftware.sqliteasset:sql'
+    //Library to create Text Drawable image
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.01'
+
     compile 'com.google.firebase:firebase-core:11.8.0'
     compile 'com.google.firebase:firebase-database:11.8.0'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'

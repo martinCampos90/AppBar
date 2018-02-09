@@ -40,7 +40,7 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final ProgressDialog mDialog = new ProgressDialog(SignUp.this);
-                mDialog.setMessage("Please waiting...");
+                mDialog.setMessage("Por favor espere...");
                 mDialog.show();
 
                 table_user.addValueEventListener(new ValueEventListener() {
@@ -49,12 +49,12 @@ public class SignUp extends AppCompatActivity {
                         //Check if already user phone
                         if(dataSnapshot.child(edtPhone.getText().toString()).exists()){
                             mDialog.dismiss();
-                            Toast.makeText(SignUp.this,"Phone Number already register",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this,"Este número ya está registrado",Toast.LENGTH_SHORT).show();
                         }else{
                             mDialog.dismiss();
                             User user = new User (edtName.getText().toString(),edtPassword.getText().toString());
                             table_user.child(edtPhone.getText().toString()).setValue(user);
-                            Toast.makeText(SignUp.this,"Sign up successfully !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this,"¡Registro éxitoso!", Toast.LENGTH_SHORT).show();
                             finish();
                         }
                     }

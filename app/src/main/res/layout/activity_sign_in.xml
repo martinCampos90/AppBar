@@ -53,7 +53,7 @@
 
     <bulebar.reservacion.appbar.info.hoang8f.widget.FButton
         android:id="@id/btnSignIn"
-        android:text="Sign In"
+        android:text="Ingresar"
         android:textColor="@android:color/white"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
