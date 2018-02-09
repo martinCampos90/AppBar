@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1031494065150",
+    "firebase_url": "https://bulebar-4516e.firebaseio.com",
+    "project_id": "bulebar-4516e",
+    "storage_bucket": "bulebar-4516e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031494065150:android:c023c7e99ea7192c",
+        "android_client_info": {
+          "package_name": "bulebar.reservacion.appbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031494065150-2ed9gvdtokg7s6a54nqd8gnldnq93m7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bulebar.reservacion.appbar",
+            "certificate_hash": "07ff7e8e6e331f022af186c767200bee473d4a28"
+          }
+        },
+        {
+          "client_id": "1031494065150-55fa4t3pcljc3p88o6hnbbr0ot406tbf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-TtfKvp6iEkT0G0QothCNRTlSB3Dxkig"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031494065150-55fa4t3pcljc3p88o6hnbbr0ot406tbf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
