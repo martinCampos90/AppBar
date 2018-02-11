@@ -29,7 +29,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //Add Library
-
+    compile 'com.github.mancj:MaterialSearchBar:0.7.1'
     //Add two libraries
     //Support Design and elegant number button
     compile 'com.cepheuen.elegant-number-button:lib:1.0.2'
