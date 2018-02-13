@@ -137,7 +137,7 @@ public class FoodList extends AppCompatActivity {
                         //Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
                         //Start new Activity
                         Intent foodDetail = new Intent(FoodList.this,FoodDetail.class);
-                        foodDetail.putExtra("FoodId",searchAdapter.getRef(position).getKey());//Send Food Id to new Activity
+                        foodDetail.putExtra("foodId",searchAdapter.getRef(position).getKey());//Send Food Id to new Activity
                         startActivity(foodDetail);
                     }
                 });
@@ -147,7 +147,7 @@ public class FoodList extends AppCompatActivity {
     }
 
     private void loadSuggest(){
-        foodList.orderByChild("MenuId").equalTo(categoryId)
+        foodList.orderByChild("menuId").equalTo(categoryId)
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -168,7 +168,7 @@ public class FoodList extends AppCompatActivity {
         adapter = new FirebaseRecyclerAdapter<Food, FoodViewHolder>(Food.class,
                 R.layout.food_item,
                 FoodViewHolder.class,
-                foodList.orderByChild("MenuId").equalTo(categoryId)) //like: Select * From foods where MenuId =
+                foodList.orderByChild("menuId").equalTo(categoryId)) //like: Select * From foods where MenuId =
         {
             @Override
             protected void populateViewHolder(FoodViewHolder viewHolder, Food model, int position) {
@@ -182,7 +182,7 @@ public class FoodList extends AppCompatActivity {
                         //Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
                         //Start new Activity
                         Intent foodDetail = new Intent(FoodList.this,FoodDetail.class);
-                        foodDetail.putExtra("FoodId",adapter.getRef(position).getKey());//Send Food Id to new Activity
+                        foodDetail.putExtra("foodId",adapter.getRef(position).getKey());//Send Food Id to new Activity
                         startActivity(foodDetail);
                     }
                 });

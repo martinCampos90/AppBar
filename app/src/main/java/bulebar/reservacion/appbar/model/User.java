@@ -8,6 +8,7 @@ public class User {
     private String name;
     private String password;
     private String phone;
+    private String IsStaff;
 
 
     public User() {
@@ -17,6 +18,15 @@ public class User {
         this.name = name;
         this.password = password;
         this.phone = phone;
+        IsStaff = "false";
+    }
+
+    public String getIsStaff() {
+        return IsStaff;
+    }
+
+    public void setIsStaff(String isStaff) {
+        this.IsStaff = isStaff;
     }
 
     public String getName() {
