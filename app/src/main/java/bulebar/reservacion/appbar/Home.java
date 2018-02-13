@@ -25,6 +25,7 @@ import com.squareup.picasso.Picasso;
 
 import bulebar.reservacion.appbar.Common.Common;
 import bulebar.reservacion.appbar.Interface.ItemClickListener;
+import bulebar.reservacion.appbar.Service.ListenOrder;
 import bulebar.reservacion.appbar.ViewHolder.MenuViewHolder;
 import bulebar.reservacion.appbar.model.Category;
 
@@ -91,6 +92,9 @@ public class Home extends AppCompatActivity
         recycler_menu.setLayoutManager(layoutManager);
 
         loadMenu();
+
+        Intent service = new Intent(Home.this, ListenOrder.class);
+        startService(service);
     }
 
     private void loadMenu(){
