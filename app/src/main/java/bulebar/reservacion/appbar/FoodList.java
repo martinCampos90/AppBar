@@ -24,6 +24,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import bulebar.reservacion.appbar.Common.Common;
 import bulebar.reservacion.appbar.Interface.ItemClickListener;
 import bulebar.reservacion.appbar.ViewHolder.FoodViewHolder;
 import bulebar.reservacion.appbar.model.Food;
@@ -64,7 +65,12 @@ public class FoodList extends AppCompatActivity {
         if(getIntent() != null)
             categoryId = getIntent().getStringExtra("CategoryId");
         if(!categoryId.isEmpty()&&categoryId!=null){
-            loadListFood(categoryId);
+            if(Common.isConnectedToInternet(getBaseContext()))
+                loadListFood(categoryId);
+            else{
+                Toast.makeText(FoodList.this,"Por favor verifica tu conexión",Toast.LENGTH_SHORT).show();
+                return;
+            }
         }
 
         //Search

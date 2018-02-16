@@ -3,6 +3,7 @@ package bulebar.reservacion.appbar.ViewHolder;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import bulebar.reservacion.appbar.Common.Common;
 import bulebar.reservacion.appbar.Interface.ItemClickListener;
 import bulebar.reservacion.appbar.R;
 import bulebar.reservacion.appbar.model.Order;
@@ -26,7 +28,8 @@ import bulebar.reservacion.appbar.model.Order;
  * Created by MDJ16 on 10/02/2018.
  */
 
-class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+        ,View.OnCreateContextMenuListener{
     public TextView txt_cart_name,txt_price;
     public ImageView img_cart_count;
 
@@ -42,10 +45,19 @@ class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
         txt_price = (TextView)itemView.findViewById(R.id.cart_item_price);
         img_cart_count = (ImageView)itemView.findViewById(R.id.cart_item_count);
 
+        itemView.setOnCreateContextMenuListener(this);
+
     }
 
     @Override
     public void onClick(View view){
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+        contextMenu.setHeaderTitle("Seleccione una opción");
+        contextMenu.add(0,0,getAdapterPosition(), Common.DELETE);
 
     }
 }

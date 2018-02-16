@@ -20,6 +20,7 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
+import bulebar.reservacion.appbar.Common.Common;
 import bulebar.reservacion.appbar.Database.Database;
 import bulebar.reservacion.appbar.model.Food;
 import bulebar.reservacion.appbar.model.Order;
@@ -82,7 +83,12 @@ public class FoodDetail extends AppCompatActivity {
             foodId = getIntent().getStringExtra("foodId");
         }
         if(!foodId.isEmpty()){
-            getDetailFood(foodId);
+            if(Common.isConnectedToInternet(getBaseContext()))
+                getDetailFood(foodId);
+            else{
+                Toast.makeText(FoodDetail.this,"Por favor verifica tu conexión",Toast.LENGTH_SHORT).show();
+                return;
+            }
         }
 
     }
