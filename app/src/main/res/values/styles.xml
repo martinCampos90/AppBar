@@ -22,4 +22,23 @@
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textStyle">normal</item>
     </style>
+
+    <!--Rating Dialog-->
+    <style name="RatingDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/RatingButtonDialogStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/RatingButtonDialogStyle</item>
+    </style>
+
+    <style name="RatingButtonDialogStyle" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:background">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="RatingDialogFadeAnim">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
 </resources>
