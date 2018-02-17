@@ -28,6 +28,7 @@ import bulebar.reservacion.appbar.Interface.ItemClickListener;
 import bulebar.reservacion.appbar.Service.ListenOrder;
 import bulebar.reservacion.appbar.ViewHolder.MenuViewHolder;
 import bulebar.reservacion.appbar.model.Category;
+import io.paperdb.Paper;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -54,7 +55,7 @@ public class Home extends AppCompatActivity
         database = FirebaseDatabase.getInstance();
         category = database.getReference("Category");
 
-
+        Paper.init(this);
 
 
 
@@ -166,6 +167,9 @@ public class Home extends AppCompatActivity
             Intent orderIntent = new Intent(Home.this,OrderStatus.class);
             startActivity(orderIntent);
         } else if (id == R.id.nav_log_out) {
+            //Delete Remember user & password
+            Paper.book().destroy();
+
             //Logout
             Intent sigIn = new Intent(Home.this,SignIn.class);
             sigIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);

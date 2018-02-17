@@ -14,7 +14,11 @@ public class Common {
     public static User currentUser;
     //Create variable to save current User
 
+
     public static final String DELETE = "Borrar";
+    public static final String USER_KEY = "User";
+    public static final String PWD_KEY = "Password";
+
     public static String convertCodeToStatus(String code){
         if(code.equals("0"))
             return "Placed";
