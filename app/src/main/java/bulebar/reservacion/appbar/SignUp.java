@@ -20,7 +20,7 @@ import bulebar.reservacion.appbar.model.User;
 
 public class SignUp extends AppCompatActivity {
 
-    MaterialEditText edtPhone,edtName,edtPassword;
+    MaterialEditText edtPhone,edtName,edtPassword,edtSecureCode;
     Button btnSignUp;
 
     @Override
@@ -31,6 +31,8 @@ public class SignUp extends AppCompatActivity {
         edtName = (MaterialEditText) findViewById(R.id.edtName);
         edtPassword = (MaterialEditText) findViewById(R.id.edtPassword);
         edtPhone = (MaterialEditText) findViewById(R.id.edtPhone);
+        edtSecureCode = (MaterialEditText) findViewById(R.id.edtSecureCode);
+
         btnSignUp = (Button)findViewById(R.id.btnSignUp);
 
         //Init Firebase
@@ -57,7 +59,7 @@ public class SignUp extends AppCompatActivity {
                                 Toast.makeText(SignUp.this, "Este número ya está registrado", Toast.LENGTH_SHORT).show();
                             } else {
                                 mDialog.dismiss();
-                                User user = new User(edtName.getText().toString(), edtPassword.getText().toString(), edtPhone.getText().toString());
+                                User user = new User(edtName.getText().toString(), edtPassword.getText().toString(), edtPhone.getText().toString(),edtSecureCode.getText().toString());
                                 table_user.child(edtPhone.getText().toString()).setValue(user);
                                 Toast.makeText(SignUp.this, "¡Registro éxitoso!", Toast.LENGTH_SHORT).show();
                                 finish();

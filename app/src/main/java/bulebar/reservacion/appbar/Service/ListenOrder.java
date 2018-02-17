@@ -18,7 +18,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import bulebar.reservacion.appbar.Common.Common;
 import bulebar.reservacion.appbar.OrderStatus;
 import bulebar.reservacion.appbar.R;
-import bulebar.reservacion.appbar.model.Order;
 import bulebar.reservacion.appbar.model.Request;
 
 public class ListenOrder extends Service implements ChildEventListener {

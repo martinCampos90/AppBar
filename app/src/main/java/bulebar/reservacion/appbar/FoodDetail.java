@@ -1,6 +1,5 @@
 package bulebar.reservacion.appbar;
 
-import android.media.Image;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -17,8 +16,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import bulebar.reservacion.appbar.Common.Common;
 import bulebar.reservacion.appbar.Database.Database;
