@@ -1,10 +1,14 @@
 package bulebar.reservacion.appbar;
 
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,20 +22,31 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.rengwuxian.materialedittext.MaterialEditText;
+import com.rey.material.widget.Button;
 import com.squareup.picasso.Picasso;
+
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
+import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
+
+import java.util.Calendar;
 
 import bulebar.reservacion.appbar.Common.Common;
 import bulebar.reservacion.appbar.Interface.ItemClickListener;
 import bulebar.reservacion.appbar.Service.ListenOrder;
 import bulebar.reservacion.appbar.ViewHolder.MenuViewHolder;
 import bulebar.reservacion.appbar.model.Category;
+import bulebar.reservacion.appbar.model.User;
 import io.paperdb.Paper;
 
 
 public class Home extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     FirebaseDatabase database;
     DatabaseReference category;
@@ -160,6 +175,8 @@ public class Home extends AppCompatActivity
 
         if (id == R.id.nav_menu) {
             // Handle the camera action
+            Intent reservaIntent = new Intent(Home.this,reservacionForm.class);
+            startActivity(reservaIntent);
         } else if (id == R.id.nav_cart) {
             Intent cartIntent = new Intent(Home.this,Cart.class);
             startActivity(cartIntent);
@@ -179,4 +196,12 @@ public class Home extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
+
+
+
+
+
 }
