@@ -29,7 +29,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //Add Library
-
     compile 'io.paperdb:paperdb:2.1'
     compile 'com.stepstone.apprating:app-rating:2.0.0'
     compile 'com.github.rey5137:material:1.2.4'

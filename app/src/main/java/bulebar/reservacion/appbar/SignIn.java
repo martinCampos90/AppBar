@@ -114,9 +114,9 @@ public class SignIn extends AppCompatActivity {
 
         });
     }
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
     private void showForgotPwdDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Contraseña olvidada");
         builder.setMessage("Ingresa tu código de seguridad");
 

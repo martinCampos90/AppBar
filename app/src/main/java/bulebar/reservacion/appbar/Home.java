@@ -29,6 +29,7 @@ import bulebar.reservacion.appbar.ViewHolder.MenuViewHolder;
 import bulebar.reservacion.appbar.model.Category;
 import io.paperdb.Paper;
 
+
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
